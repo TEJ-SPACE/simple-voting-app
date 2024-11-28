@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Voting results are here!</h1>
+    <ul>
+        {% for option, count in votes.items() %}
+            <li>{{ option }} : {{ count }}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="/">Go back to voting</a>
+    <form action="/reset" method="POST"><br>
+        <button type="submit" name="reset_count">Reset Votes</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting App</title>
+</head>
+<body>
+    <h1>Vote for your favourite option!</h1>
+    <form action="/" method="POST">
+        {% for option in options %}
+            <label>
+                <input type="radio" name="vote" value="{{ option }}">
+                {{ option }}
+            </label><br>
+        {% endfor %}
+        <br>
+        <button type="submit">Vote</button>
+    </form><br>
+    <a href="/results">Voting Results</a>
+</body>
+</html>
